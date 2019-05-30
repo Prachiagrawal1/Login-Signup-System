@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="jsvalid.css">
+  <title>Validation</title>
+</head>
+<body>
+  <div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="Switch(event, 'login')">Login</button>
+    <button class="tablinks" onclick="Switch(event, 'signup')">Signup</button>
+  </div>
+  <div class="signup-form" id="signup">
+    <h1>Signup</h1>
+    <p>&nbsp;</p>
+    <form action="includes/store_user.php" method="POST"  >
+      <p><label for="name">Name: </label>
+        <input type="text" name="name" id="name" required /></p>
+      <p><label for="email">E-mail: </label>
+        <input type="email" name="email" id="email" required/></p>
+      <p><label for="pass">Password: </label>
+        <input type="password" name="password"  id="pass" required /></p>
+      <p><label for="confirm_pass">Confirm Password: </label>
+        <input type="password" name="confirm_pass" id="confirm_pass" required/></p>
+      <p><label for="url">Website: </label>
+        <input type="url" name="url" id="url" required /></p>
+        <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;">
+         <label>Remember me</label>
+         <p>&nbsp;</p>
+        <input type='submit' name="signup-submit" value='Submit'>
+    </form>
+  </div>
+
+  <div class="signup-form active" id="login">
+    <h1>Login</h1>
+    <p>&nbsp;</p>
+    <form action="includes/store_user.php" method="POST"  >
+      <p><label for="email">E-mail: </label>
+        <input type="email" name="email" id="email" required /></p>
+      <p><label for="pass">Password: </label>
+        <input type="password" name="password" id="pass" required/></p>
+        <input type="checkbox" value="lsRememberMe" id="rememberMe" style="display: inline-block;">
+         <label>Remember me</label>
+         <p>&nbsp;</p>
+        <input type='submit' name="login-submit" value='Submit'>
+    </form>
+  </div>
+  <script src="jsvalid.js"></script>
+</body>
+
+</html>
